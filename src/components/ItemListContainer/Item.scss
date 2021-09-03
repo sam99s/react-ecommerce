@@ -1,0 +1,36 @@
+.card{
+    width: 20rem;
+    height: 30rem;
+    margin: 1rem;
+    padding: 1rem;
+    align-self: center;
+    box-shadow: 10px 5px 5px grey;
+    position: relative;
+    &-body{
+        text-align: center;
+        align-self: center;
+    }
+    .item-picture{
+        height: 50%;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        align-self: center;
+    }
+    
+    
+    button{
+        margin: 0.5rem;
+        align-self: center;
+    }
+
+    .precio{
+        position: absolute;
+        right: 40%;
+        left: 40%;
+        bottom: -3%;
+        height: 2em;
+        width: 6em;
+        font-size: 0.8em;
+    }
+}
