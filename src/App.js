@@ -5,8 +5,8 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
-import { CartScreen } from "./components/CartScreen/CartScreen";
 import { UIContextProvider } from "./context/UIContext";
+import { Cart } from "./components/Cart/Cart";
 
 
 
@@ -34,7 +34,7 @@ function App() {
                         </Route>
 
                         <Route exact path="/cart">
-                            <CartScreen/>
+                            <Cart/>
                         </Route>
 
                         <Route path="*">

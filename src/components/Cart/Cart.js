@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { BsFillTrashFill } from 'react-icons/bs'
-import './CartScreen.scss'
+import './Cart.scss'
 
-export const CartScreen = () => {
-
+export const Cart = () => {
+    
     const {carrito, eliminarDelCarrito, vaciarCarrito} = useContext(CartContext)
 
     return (

@@ -5,6 +5,11 @@
     padding: 10px 10%;
     background-image: linear-gradient(90deg, #283c86 0%, #45a247 100%);
     color: white;
+    justify-content: center;
+    .navLink, .cart, .logo{
+        text-align: center;
+    }
+
     a {
         color: white;
         text-decoration: none;
@@ -12,5 +17,8 @@
     }
     a:hover{
         color: black;
+    }
+    li{
+        list-style: none;
     }
 }
