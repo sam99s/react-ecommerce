@@ -5,7 +5,7 @@ import './Cart.scss'
 
 export const Cart = () => {
     
-    const {carrito, eliminarDelCarrito, vaciarCarrito} = useContext(CartContext)
+    const {carrito, eliminarDelCarrito, vaciarCarrito, totalCarrito} = useContext(CartContext)
 
     return (
         <div className="container">
@@ -28,6 +28,10 @@ export const Cart = () => {
             ))}
 
             <hr/>
+
+            <div className="d-flex justify-content-center">
+                <span className="Total">Total: ${totalCarrito()}</span>
+            </div>
 
             <div className="d-flex justify-content-center">
                 <button className="btn btn-danger col-2" onClick={vaciarCarrito}>Vaciar carrito</button>
