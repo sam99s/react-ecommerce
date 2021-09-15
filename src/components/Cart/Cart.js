@@ -7,30 +7,8 @@ import { Link } from 'react-router-dom'
 export const Cart = () => {
     
     const {carrito, eliminarDelCarrito, vaciarCarrito, totalCarrito} = useContext(CartContext);
-    const [msj,setMsj] = useState(false);
 
-    let verMensaje = () => {
-        if(totalCarrito() === 0){
-            setMsj(false)
-        }else{
-            setMsj(true)
-        }
-    }
-
-    useEffect(() => {
-        verMensaje();
-    },[totalCarrito])
-
-    useEffect( () =>{
-        if(msj){
-            document.getElementById('MENSAJE').classList.remove('verMSJ');
-            document.getElementById('MENSAJE').classList.add('noVerMSJ');
-        }else{
-            document.getElementById('MENSAJE').classList.remove('noVerMSJ');
-            document.getElementById('MENSAJE').classList.add('verMSJ');
-        }
-
-    },[msj])
+    
 
     return (
         <div className="container">
@@ -39,10 +17,8 @@ export const Cart = () => {
                 <h1 className="col-12 text-decoration-underline text-center">Resumen de compra</h1>
                 
                 <span className="col-3"></span>
-                <span className="col-6 posicionarMensaje">
-                    <Link to="/">
-                    <button id="MENSAJE" className="btn btn-primary VerMsj">Carrito vacio, volver a comprar</button>
-                    </Link>
+                <span className="col-6 posicionarMensaje">                  
+                    {carrito.length > 0 ? <prev></prev> : <Link to="/"><button className="btn btn-primary VerMsj">Carrito vacio, volver a comprar</button></Link>}
                 </span>                
                 <span className="col-3"></span>
             </div>
