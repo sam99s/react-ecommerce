@@ -44,15 +44,24 @@ export const Cart = () => {
 
             <hr/>
 
-            <div className="d-flex justify-content-center">
-                <span className="Total">Total: ${totalCarrito()}</span>
-            </div>
+            {totalCarrito() != 0 
+            ?
+            <>
+                <div className="d-flex justify-content-center">
+                    <span className="Total">Total: ${totalCarrito()}</span>
+                </div>
 
-            <div className="d-flex justify-content-center">
-                <button className="btn btn-danger col-2" onClick={vaciarCarrito}>Vaciar carrito</button>
-                <span className="col-1"></span>
-                <button className="btn btn-success col-2">Pagar</button>
-            </div>
+                <div className="d-flex justify-content-around container">
+                    <button className="btn btn-danger col-2" onClick={vaciarCarrito}>Vaciar carrito</button>                    
+                    <Link to="/checkout" className="col-2">
+                        <button className="btn btn-success">Comprar</button>
+                    </Link>
+                </div>             
+            </> 
+            : 
+            <prev></prev>}
+
+            
         </div>
     )
 }
