@@ -8,6 +8,7 @@ import { CartProvider } from "./context/CartContext";
 import { UIContextProvider } from "./context/UIContext";
 import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
+import { Footer } from "./components/Footer/Footer";
 
 
 
@@ -46,6 +47,8 @@ function App() {
                             <Redirect to="/"/>
                         </Route>
                     </Switch>
+
+                    <Footer />
                     
                 </BrowserRouter>
                 </CartProvider>
