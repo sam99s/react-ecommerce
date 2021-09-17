@@ -6,7 +6,7 @@ import './Footer.scss';
 export const Footer = () => {
 
     return(
-        <footer className="container-fluid d-flex justify-content-between align-items-center">
+        <footer className="container-fluid d-flex justify-content-between align-items-center mt-5">
             <div className="col-4">
                 <Link to="/">
                     <img src={logo200} />

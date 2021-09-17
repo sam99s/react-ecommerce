@@ -17,9 +17,11 @@ export const ItemDetail = ({category, id, title, description, pictureUrl, price,
     }
 
     return (
-        <div className="container text-center">
+        <div className="container text-center mt-5">
             <h2>{title}</h2>
-            <p className="fw-bolder">precio: ${price}</p>
+            <hr/>
+            <p className="fw-bolder fs-4">precio: ${price}</p>
+            <p className="fs-6">Stock Disponible: {stock}</p>
 
 
             <img src={pictureUrl} alt={title} className="pictureDetail" />
@@ -32,7 +34,7 @@ export const ItemDetail = ({category, id, title, description, pictureUrl, price,
                 agregar={handleAdd} 
                 agregado={isInCart(id)}
             />
-            <Link to={`/category/${category}`} className="btn btn-primary">Volver</Link>
+            <Link to={`/category/${category}`} className="btn btn-primary mb-5">Volver</Link>
         </div>
     )
 }

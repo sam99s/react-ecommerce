@@ -26,7 +26,7 @@ export const Checkout = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        if (values.nombre.length >= 3 && values.email.length > 5 && values.tel.length >= 10) {
+        if (values.nombre.length >= 3 && values.email.length > 5 && values.tel.length >= 10 && e.target.email.value === e.target.mail.value) {
             generarOrden(values, carrito, totalCarrito())
                 .then( res => {
                     Swal.fire({
@@ -51,14 +51,7 @@ export const Checkout = () => {
 
 
     }
-
-
-
-    const buyer = {
-        nombre: "sam",
-        tel: 123465,
-        email: "esteesmiemail@mail.com"
-    }
+    
 
     return (
         <div>
@@ -100,7 +93,7 @@ export const Checkout = () => {
                             />
                         </div>
 
-                        <div className="mb-3">
+                        <div className="mb-3 d-flex container flex-wrap">
                             <label for="buyerEmail" className="form-label">Email</label>
                             <input
                                 type="email"
@@ -110,6 +103,16 @@ export const Checkout = () => {
                                 value={values.email}
                                 onChange={handleInputChange}
                                 name="email"
+                                required
+                            />
+                            <label for="buyerMail" className="form-label">Vuelve a ingresar tu Email</label>
+                            <input
+                                type="mail"
+                                className="form-control"
+                                id="buyerMail"
+                                value={values.mail}
+                                onChange={handleInputChange}
+                                name="mail"
                                 required
                             />
                         </div>

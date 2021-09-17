@@ -18,7 +18,7 @@ export const NavBar = () => {
     }
 
     return (
-        <header className="encabezado container-fluid">
+        <header className="encabezado container-fluid mb-5">
             <div className="col-2 logo">
                 <Link to={"/"}>
                     <img src={logo200} />
