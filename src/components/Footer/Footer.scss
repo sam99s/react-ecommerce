@@ -1,7 +1,16 @@
 footer{
     color: white;
     background-image: linear-gradient(90deg, #283c86 0%, #45a247 100%);
+    height: 20vh;
     li{
         list-style: none;
+    }
+    .social{
+        width: 100%;
+        height: 50%;
+        &-logo{
+            width: 30%;
+            height: 20%;
+        }
     }
 }
