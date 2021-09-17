@@ -16,7 +16,7 @@ export const Footer = () => {
             </div>
 
             <div className="col-4">
-                <span>Depordev®/Todos los derechos reservados</span>
+                <span>Depordev® / Todos los derechos reservados</span>
             </div>
 
             <div className="col-4">
