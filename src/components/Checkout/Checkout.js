@@ -116,8 +116,8 @@ export const Checkout = () => {
                                 required
                             />
                         </div>
-
-                        <button type="submit" className="btn btn-success" >Finalizar Compra</button>
+                        
+                        <button type="submit" className="btn btn-success">Finalizar Compra</button>
                     </form>
                 </div>
             </>

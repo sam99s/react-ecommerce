@@ -34,7 +34,11 @@ export const ItemDetail = ({category, id, title, description, pictureUrl, price,
                 agregar={handleAdd} 
                 agregado={isInCart(id)}
             />
-            <Link to={`/category/${category}`} className="btn btn-primary mb-5">Volver</Link>
+
+            <div className="container d-flex justify-content-around">
+                <Link to={`/category/${category}`} className="btn btn-outline-primary mb-5 col-3">Ver mas en {category}</Link>
+                <Link to={`/`} className="btn btn-outline-primary mb-5 col-3">Volver al Home</Link>
+            </div>
         </div>
     )
 }
